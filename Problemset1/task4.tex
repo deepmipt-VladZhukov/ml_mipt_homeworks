@@ -85,4 +85,13 @@ $$ \mathbb{E} FPR = p$$
 $$ \mathbb{E} TPR = p$$
 
 Значит средняя точка лежит на диагонали квадрата. Значит площадь в среднем равна $\frac{1}{2}$
+
+\Large{
+\textbf {4.3 Ошибка 1NN оптимального байесовского классификатора}
+}
+$$ \lim_{n \to \infty} Pr(y \ne y_n) = \lim_{n \to \infty} \sum_{y \ne y_n \in \{0, 1\}} Pr(y, y_n | x, x_n) =$$
+$$= \lim_{n \to \infty} \sum_{y \ne y_n \in \{0, 1\}} Pr(y|x) Pr(y_n|x_n) = \sum_{y \in \{0, 1\}} Pr(y|x) (1 - Pr(y|x)) = $$
+$$= Pr(0|x)(1 - Pr(0|x)) + Pr(1 | x) (1 - Pr(1 | x)) = $$
+$$= 2 \max_{y \in \{0, 1\}} Pr(y|x) (1 - \max_{y \in \{0, 1\}} Pr(y|x)) \le 2E_B = $$
+$$ 2 (1 - \max_{y \in \{0, 1\}} Pr(y|x))$$
 \end{document}
