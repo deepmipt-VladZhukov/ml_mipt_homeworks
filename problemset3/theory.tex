@@ -94,6 +94,16 @@ $$ \mathbb E_{x, y, X^l} [(a_{X^l(x) - \mathbb E_{x, y, X^l}a_{X^l}(x)})^2|x] + 
 $$\mathbb E_{x, y} (y - \mathbb E(y|x))^2 + \mathbb E_{x, y} (\mathbb E(y|x) - \mathbb E_{X^l}a_{X^l}(x))^2 + \mathbb E{x, y}\mathbb E{X^l}(a_{X^l}(X) - \mathbb E_{X^l}a_{X^l}(x))$$
 
 \Large {
+\textbf {2.2 Смещение и разброс в бэггинге}
+}
+$$ MSE = \mathbb E_{X, Y, x, y} [\frac{1}{n} \sum_{i = 1}^{n} - y(x)]^2 = $$
+$$ = \mathbb E_{X, Y, x, y} (\frac{1}{n} \sum_{i = 1}^n \eps_i)^2 = $$
+$$ = \frac{1}{n^2} \mathbb E_{X, Y, x, y} (\sum_{i=1}^n \eps_i^2(x) + \sum_{i \ne j} \eps_i \eps_j )= $$
+В случае нескоррелированных ошибок базовых алгоритмов
+$$ = \frac{1}{n} (\frac{1}{n} \mathbb E_{X, Y, x, y} \eps_i^2(x)) $$
+В случае несмещенной ошибки получаем, что мы уменьшили varience в n раз (понятно что в общем случае можно теоретически сместить оценкую и рассматривать опять несмещенную ошибку)
+
+\Large {
 \textbf {2.3 Корреляция ответов базовых алгоритмов}
 }
 $$ \mathbb D_{X, Y, x, y} (\frac{1}{M} \sum_i \xi_i)= \frac{1}{M^2} \mathbb D_{X, Y, x, y} (\sum_i \xi_i)$$ по формеле дисперсии суммы
